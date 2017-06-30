@@ -4,16 +4,15 @@
 public class Node {
 
     private Node next;
-
     private int data;
 
     //return the next
-    public Node getNext() {
+    public Node getNextNode() {
         return next;
     }
 
     //@param next the next to set
-    public void setNext(Node next) {
+    public void setNextNode(Node next) {
         this.next = next;
     }
 

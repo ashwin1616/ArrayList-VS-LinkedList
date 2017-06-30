@@ -3,48 +3,51 @@
  */
 public class MyLinkedList {
 
-    private Node head;
+    private Node headNode;
     private int size;
 
-    public MyLinkedList(){
-        head = null;
+    public MyLinkedList() {
+        headNode = null;
         size = 0;
     }
 
     /**
      * add node in particular index
+     *
      * @param index
      * @param newNode
      */
-    public void add(int index, Node newNode){
+    public void add(int index, Node newNode) {
         //in case, first node
         Node nextNode = null;
-        if(index == 0 ){
-            if(this.head == null){
-                this.head = new Node();
-                this.head.setNext(newNode);
-            } else{
-                nextNode = this.head.getNext();
-                newNode.setNext(nextNode);
-                this.head.setNext(newNode);
+        if (index == 0) {
+            if (this.headNode == null) {
+                this.headNode = new Node();
+                this.headNode.setNextNode(newNode);
+            } else {
+                nextNode = this.headNode.getNextNode();
+                newNode.setNextNode(nextNode);
+                this.headNode.setNextNode(newNode);
             }
 
         } else {
             //not first node
-            if( index < 0 || index > this.size-1 ) {throw new IndexOutOfBoundsException();}
+            if (index < 0 || index > this.size - 1) {
+                throw new IndexOutOfBoundsException();
+            }
 
-            Node p = this.head;
+            Node p = this.headNode;
 
-            for(int i = 0; i < index-1; i++){
+            for (int i = 0; i < index - 1; i++) {
 
-                p = p.getNext();
+                p = p.getNextNode();
 
-                if(index < this.size) nextNode = p.getNext();
+                if (index < this.size) nextNode = p.getNextNode();
 
             }
-            if(nextNode != null) newNode.setNext(nextNode);
+            if (nextNode != null) newNode.setNextNode(nextNode);
 
-            p.setNext(newNode);
+            p.setNextNode(newNode);
         }
 
         this.size++;
@@ -52,21 +55,23 @@ public class MyLinkedList {
 
     /**
      * add node in last index
+     *
      * @param index
      * @param newNode
      */
-    public void add(Node newNode){
+    public void add(Node newNode) {
         //in case, first node
-        if(this.head == null){
-            this.head = new Node();
-            this.head.setNext(newNode);
-
+        if (this.headNode == null) {
+            this.headNode = new Node();
+            this.headNode.setNextNode(newNode);
+            System.out.println("newNode "+newNode);
         } else {
-            Node p = this.head;
-            for(int i = 0; i < this.size; i++){
-                p = p.getNext();
+            Node p = this.headNode;
+            for (int i = 0; i < this.size; i++) {
+                p = p.getNextNode();
+                System.out.println("Node "+p);
             }
-            p.setNext(newNode);
+            p.setNextNode(newNode);
         }
 
         this.size++;
@@ -74,46 +79,50 @@ public class MyLinkedList {
 
     /**
      * remove particular node
+     *
      * @param index
      * @param node
      */
-    public void remove(int index){
+    public void remove(int index) {
         //
-        Node headNode = this.head;
-        if(headNode == null){System.out.println("not exist removing data");}
+        Node headNode = this.headNode;
+        if (headNode == null) {
+            System.out.println("not exist removing data");
+        }
         Node p = headNode;
 
-        for(int i = 0; i < index-1; i++){
-            p = p.getNext();
+        for (int i = 0; i < index - 1; i++) {
+            p = p.getNextNode();
         }
-        p.setNext(p.getNext().getNext());
+        p.setNextNode(p.getNextNode().getNextNode());
         this.size--;
         //
     }
 
     /**
      * return last node
+     *
      * @return
      */
-    public Node get(){
+    public Node get() {
 
-        if(this.head == null) throw new IndexOutOfBoundsException();
-        Node p = head;
+        if (this.headNode == null) throw new IndexOutOfBoundsException();
+        Node p = headNode;
 
-        for(int i = 0; i < this.size; i++){
-            p = p.getNext();
+        for (int i = 0; i < this.size; i++) {
+            p = p.getNextNode();
         }
 
         return p;
     }
 
-    public void printList(){
+    public void printList() {
         System.out.println("<<Print LinkedList Data>>");
-        if(this.head != null){
-            Node p = this.head;
-            for(int i = 0; i < size; i++){
-                p = p.getNext();
-                if(p != null) System.out.print(p.getData()+", ");
+        if (this.headNode != null) {
+            Node p = this.headNode;
+            for (int i = 0; i < size; i++) {
+                p = p.getNextNode();
+                if (p != null) System.out.print(p.getData() + ", ");
             }
         }
     }
