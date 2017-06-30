@@ -4,54 +4,54 @@ public class Main {
 
         int[] array = {61, 23, 79, 15, 8, 32, 94, 1};
 
-//        System.out.println("<<<<<<<<<<<< MyArrayList TEST>>>>>>>>>>>>>");
-//        MyArrayList arrayList = new MyArrayList(array.length);
-//
-//        for (int i = 0; i < array.length; i++) {
-//            arrayList.add(array[i]);
-//        }
-//
-//        arrayList.add(10);
-//        System.out.println("add last index '10'");
-//
-//        for (int i = 0; i < arrayList.length; i++) {
-//            System.out.print(arrayList.get(i) + ", ");
-//        }
-//
-//        System.out.println("");
-//        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
-//        System.out.println("");
-//
-//        arrayList.add(3, 20);
-//        System.out.println("3번째 인덱스에 '20'추가");
-//        for (int i = 0; i < arrayList.length; i++) {
-//            System.out.print(arrayList.get(i) + ", ");
-//        }
-//
-//        System.out.println("");
-//        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
-//        System.out.println("");
-//
-//        arrayList.remove();
-//
-//        System.out.println("마지막 인덱스 삭제");
-//        for (int i = 0; i < arrayList.length; i++) {
-//            System.out.print(arrayList.get(i) + ", ");
-//        }
-//
-//        System.out.println("");
-//        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
-//        System.out.println("");
-//
-//        arrayList.remove(3);
-//        System.out.println("3번째 인덱스 삭제");
-//        for (int i = 0; i < arrayList.length; i++) {
-//            System.out.print(arrayList.get(i) + ", ");
-//        }
-//
-//        System.out.println("");
-//        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
-//        System.out.println("");
+        System.out.println("<<<<<<<<<<<< MyArrayList TEST>>>>>>>>>>>>>");
+        MyArrayList arrayList = new MyArrayList(array.length);
+
+        for (int i = 0; i < array.length; i++) {
+            arrayList.add(array[i]);
+        }
+
+        arrayList.add(10);
+        System.out.println("add last index '10'");
+
+        for (int i = 0; i < arrayList.length; i++) {
+            System.out.print(arrayList.get(i) + ", ");
+        }
+
+        System.out.println("");
+        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
+        System.out.println("");
+
+        arrayList.add(3, 20);
+        System.out.println("3번째 인덱스에 '20'추가");
+        for (int i = 0; i < arrayList.length; i++) {
+            System.out.print(arrayList.get(i) + ", ");
+        }
+
+        System.out.println("");
+        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
+        System.out.println("");
+
+        arrayList.remove();
+
+        System.out.println("마지막 인덱스 삭제");
+        for (int i = 0; i < arrayList.length; i++) {
+            System.out.print(arrayList.get(i) + ", ");
+        }
+
+        System.out.println("");
+        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
+        System.out.println("");
+
+        arrayList.remove(3);
+        System.out.println("3번째 인덱스 삭제");
+        for (int i = 0; i < arrayList.length; i++) {
+            System.out.print(arrayList.get(i) + ", ");
+        }
+
+        System.out.println("");
+        System.out.println("MyArrayList의 사이즈:" + arrayList.length);
+        System.out.println("");
 
         System.out.println("<<<<<<<<<<<< MyLinkedList TEST >>>>>>>>>>>>>");
 
