@@ -1,0 +1,5 @@
+# ArrayList-VS-LinkedList
+ArrayList and LinkedList Differance
+An array is the data structure that contains a collection of similar type data elements whereas the Linked list is considered as non-primitive data structure contains a collection of unordered linked elements known as nodes.
+Operations like insertion and deletion in arrays consume a lot of time. On the other hand, the performance of these operations in Linked lists is fast.
+In an array, memory is assigned during compile time while in a Linked list it is allocated during execution or runtime.
